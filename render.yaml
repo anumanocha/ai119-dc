@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: ai119-dc
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
