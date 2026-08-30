@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI119 DC — Liquid-Cooled Data Centers</title>
+  <meta name="description" content="AI119 DC builds, owns, and operates high-density liquid-cooled data centers. Iowa campus signed and in development; a 100 MW buildout planned across four sites. Lease liquid-ready capacity at a transparent $150/kW/month, built on SkyVault (skyv.ai) modular infrastructure.">
+  <meta property="og:title" content="AI119 DC — Liquid-Cooled Data Centers">
+  <meta property="og:description" content="Iowa signed, 100 MW planned across four sites. 250 kW rack-ready liquid cooling at $150/kW/month — reserve capacity now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dc.ai119.com/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>(function(){try{if(localStorage.getItem("ai119-theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .dc-badge{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:2px;
+      color:var(--accent-text);border:1px solid var(--line-strong);border-radius:6px;padding:3px 7px;margin-left:8px;}
+    .site-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 22px;}
+    .site-tab{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:1.5px;padding:10px 16px;
+      border:1px solid var(--line-strong);border-radius:10px;background:transparent;color:var(--ink-2);cursor:pointer;}
+    .site-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#06231e;font-weight:600;}
+    .site-panel{display:none;}
+    .site-panel.active{display:block;}
+    .split-40{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start;}
+    @media (max-width: 860px){.split-40{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="/" aria-label="AI119 DC home">
+      <span class="tile-mini" aria-hidden="true">Ai</span>
+      <span class="wordmark">ai<span>119</span></span>
+      <span class="dc-badge">DC</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#portfolio">Sites</a></li>
+      <li><a href="#engineering">Engineering</a></li>
+      <li><a href="#leasing">Leasing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="#contact">Lease capacity</a>
+      <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ 1. HERO & VALUE PROPOSITION ============ -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">AI119 DC · Liquid-cooled data centers</p>
+        <h1>The ground the <span class="accent">AI&nbsp;cloud</span> stands on.</h1>
+        <p class="lede">AI119 DC builds, owns, and operates high-density liquid-cooled data
+          centers — powered shell with the liquid loop already in the building, delivered on
+          SkyVault (skyv.ai) modular infrastructure. If you run AI-scale hardware, lease your
+          kilowatts at one transparent rate: $150 per kW per month.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#leasing">Lease capacity</a>
+          <a class="btn btn-ghost btn-lg" href="#portfolio">See the sites</a>
+        </div>
+        <p class="hero-note">POWERED SHELL · LIQUID COOLING · $150 / KW · MONTH</p>
+      </div>
+      <div class="element-stage" aria-hidden="true">
+        <div class="orbit o1"><span class="dot"></span></div>
+        <div class="orbit o2"><span class="dot d2"></span></div>
+        <div class="element-tile">
+          <span class="z">119</span>
+          <span class="sym">A<b>i</b></span>
+          <span class="name">Aezium</span>
+          <span class="mass">LAND · POWER · COOLING</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stat band -->
+  <section class="stat-band" aria-label="Portfolio figures">
+    <div class="wrap">
+      <div class="stat">
+        <div class="v"><span data-count="25">0</span> <span class="unit">MW</span></div>
+        <div class="k">Signed — Iowa campus</div>
+      </div>
+      <div class="stat">
+        <div class="v"><span data-count="100">0</span> <span class="unit">MW</span></div>
+        <div class="k">Planned buildout, four sites</div>
+      </div>
+      <div class="stat">
+        <div class="v">$150 <span class="unit">/kW·mo</span></div>
+        <div class="k">One transparent rate</div>
+      </div>
+      <div class="stat">
+        <div class="v"><span data-count="250">0</span> <span class="unit">kW</span></div>
+        <div class="k">Rack-ready, liquid cooled</div>
+      </div>
+      <div class="stat">
+        <div class="v"><span data-count="1.10">0</span></div>
+        <div class="k">Design PUE (DLC)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value proposition -->
+  <section class="section" id="thesis">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why AI119 DC</p>
+        <h2>A landlord built for liquid-cooled tenants.</h2>
+        <p>Most data centers were designed for air and retrofitted for density. Ours were
+          designed around the liquid loop from the first drawing — so AI-scale hardware lands
+          in a building that already speaks its language.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">DC</div>
+          <h3>Pure-play landlord</h3>
+          <p>We build, own, and operate the facility — land, shell, power, and cooling — and
+            we stop there. No cloud of our own competing with yours, no shared control planes:
+            your hardware, our building, a clean boundary.</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">$</div>
+          <h3>One transparent rate</h3>
+          <p>$150 per kW per month — $1,800 per kW per year — for liquid-ready, powered
+            capacity with facility operations and maintenance included. No metered surprises,
+            no cross-connect nickel-and-diming.</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">5MW</div>
+          <h3>The repeatable phase</h3>
+          <p>Every site grows in engineered 5 MW phases built on SkyVault (skyv.ai)
+            prefabricated infrastructure — the same shell, the same liquid loop, the same
+            commissioning playbook, twenty times across the planned buildout. Build risk is
+            retired by repetition.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. GLOBAL PORTFOLIO ============ -->
+  <section class="section alt" id="portfolio">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Global sites</p>
+        <h2>One campus signed. A 100 MW plan behind it.</h2>
+        <p>Every campus follows the same template: a 10-acre fee-simple estate built out in
+          five 5&nbsp;MW phases to 25&nbsp;MW — 2.5&nbsp;MW per acre of liquid-cooled density.
+          Iowa is signed and in development today; Texas, Quebec, and India complete the
+          planned buildout. Capacity is allocated in commitment order.</p>
+      </div>
+
+      <div class="site-tabs reveal" role="tablist" aria-label="Portfolio sites">
+        <button class="site-tab" role="tab" aria-selected="true" data-site="iowa">IOWA · SIGNED</button>
+        <button class="site-tab" role="tab" aria-selected="false" data-site="texas">TEXAS · PLANNED</button>
+        <button class="site-tab" role="tab" aria-selected="false" data-site="quebec">QUEBEC · PLANNED</button>
+        <button class="site-tab" role="tab" aria-selected="false" data-site="india">INDIA · PLANNED</button>
+      </div>
+
+      <div class="site-panel active reveal" id="panel-iowa">
+        <div class="split-40">
+          <div>
+            <h3 style="font-size:22px; margin-bottom:10px;">Site 1 — Iowa, United States</h3>
+            <p style="color:var(--ink-2);">Signed and in development. Low-cost, wind-heavy
+              Midwestern power and central-US fiber routes. The proving ground: the first
+              5&nbsp;MW phase sets the engineering standard every later phase repeats.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <tbody>
+                <tr><th scope="row">Status</th><td>Signed — campus secured, first phases in development</td></tr>
+                <tr><th scope="row">Capacity</th><td>25 MW — five 5 MW phases</td></tr>
+                <tr><th scope="row">Campus</th><td>10 acres, owned fee simple — no ground-lease risk</td></tr>
+                <tr><th scope="row">Angle</th><td>Low-cost wind-heavy grid · central-US connectivity</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-panel reveal" id="panel-texas">
+        <div class="split-40">
+          <div>
+            <h3 style="font-size:22px; margin-bottom:10px;">Site 2 — Texas, United States (planned)</h3>
+            <p style="color:var(--ink-2);">ERCOT scale and speed-to-power: the fastest grid in
+              North America for large new load, deep contractor and switchgear supply chains,
+              and an energy market built for hedging a 24×7 draw.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <tbody>
+                <tr><th scope="row">Status</th><td>Planned — site selection underway on the Iowa template</td></tr>
+                <tr><th scope="row">Capacity</th><td>25 MW planned — five 5 MW phases</td></tr>
+                <tr><th scope="row">Campus</th><td>10-acre fee-simple campus, per the portfolio template</td></tr>
+                <tr><th scope="row">Angle</th><td>ERCOT speed-to-power · deep build supply chain</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-panel reveal" id="panel-quebec">
+        <div class="split-40">
+          <div>
+            <h3 style="font-size:22px; margin-bottom:10px;">Site 3 — Quebec, Canada (planned)</h3>
+            <p style="color:var(--ink-2);">Low-cost green hydropower and a cool climate that
+              flatters the liquid loop. The portfolio's sustainability anchor — renewable
+              baseload for tenants whose boards ask about carbon before capacity.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <tbody>
+                <tr><th scope="row">Status</th><td>Planned — site selection underway on the Iowa template</td></tr>
+                <tr><th scope="row">Capacity</th><td>25 MW planned — five 5 MW phases</td></tr>
+                <tr><th scope="row">Campus</th><td>10-acre fee-simple campus, per the portfolio template</td></tr>
+                <tr><th scope="row">Angle</th><td>Green hydropower baseload · cool-climate efficiency</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-panel reveal" id="panel-india">
+        <div class="split-40">
+          <div>
+            <h3 style="font-size:22px; margin-bottom:10px;">Site 4 — India (planned)</h3>
+            <p style="color:var(--ink-2);">Positioned for sovereign AI demand: data-residency
+              mandates and a national AI buildout that will want frontier capacity inside the
+              border, operated to an institutional standard.</p>
+          </div>
+          <div class="table-scroll">
+            <table class="spec-table">
+              <tbody>
+                <tr><th scope="row">Status</th><td>Planned — site selection underway on the Iowa template</td></tr>
+                <tr><th scope="row">Capacity</th><td>25 MW planned — five 5 MW phases</td></tr>
+                <tr><th scope="row">Campus</th><td>10-acre fee-simple campus, per the portfolio template</td></tr>
+                <tr><th scope="row">Angle</th><td>Sovereign AI demand · data-residency capacity</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <figure class="block-figure reveal" style="margin-top:34px;">
+        <figcaption>
+          <span><b>25 MW</b> signed — Iowa</span>
+          <span><b>100 MW</b> planned buildout</span>
+          <span><b>20</b> × 5 MW phases planned</span>
+          <span><b>One</b> repeatable 10-acre template</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 3. ENGINEERING & LIQUID COOLING STANDARD ============ -->
+  <section class="section" id="engineering">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">The engineering standard</p>
+        <h2>Liquid cooling is the product.</h2>
+        <p>Frontier AI racks are not an air-cooled proposition. Our shells are engineered
+          around the liquid loop from day one — that is what 2.5&nbsp;MW per acre means, and
+          why the densest AI hardware lands without compromise. The platform is Rubin-ready:
+          structured for smooth migration from GB200-class to Rubin Ultra-class hardware
+          without re-plumbing the hall.</p>
+      </div>
+      <div class="card-grid cols-2">
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">2.5</div>
+          <h3>2.5 MW per acre</h3>
+          <p>Ten-acre estates carrying 25 MW each — density that air cooling cannot reach.
+            Compact campuses mean shorter pipe runs, tighter electrical topology, and land
+            costs that round to zero in the capital stack.</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">CDU</div>
+          <h3>Direct-to-chip, factory-integrated</h3>
+          <p>SkyVault's liquid plant ships in the module: direct-to-chip and rear-door heat
+            exchange with smart CDUs, warm-water loops, quick-connects, and leak protection —
+            base building, not tenant fit-out. Liquid-ready for 250 kW-class racks, engineered
+            to a 1.10 design-point PUE on a platform validated below 1.2.</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">5MW</div>
+          <h3>The 5 MW phase, industrialized</h3>
+          <p>Prefabricated, factory-integrated skyv.ai modules — power, cooling, networking —
+            land on site tested. Twenty identical phases across four sites turn construction
+            from a project into a production line, with delivery windows committed at contract.</p>
+        </article>
+        <article class="card reveal">
+          <div class="glyph" aria-hidden="true">10%</div>
+          <h3>Maintained like it matters</h3>
+          <p>AI-driven DCIM watches the plant in real time for predictive maintenance, and we
+            reinvest to a fixed discipline — one dollar in every ten of invested capital, every
+            year — into maintenance, staffing, and lifecycle. The facility your racks land in
+            stays at day-one standard for the life of your lease.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. LEASING ============ -->
+  <section class="section alt" id="leasing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Leasing</p>
+        <h2>One rate. Everything the building should do, included.</h2>
+        <p>Wholesale, capacity-based leasing for AI-scale tenants — priced per kilowatt, not
+          per surprise. Take a 5&nbsp;MW phase, a building, or a whole campus.</p>
+      </div>
+
+      <div class="split-40 reveal">
+        <div class="table-scroll">
+          <table class="spec-table">
+            <tbody>
+              <tr><th scope="row">Rate</th><td>$150 /kW·month — $1,800 /kW·year
+                <small>fixed wholesale rate, capacity-based invoicing</small></td></tr>
+              <tr><th scope="row">Included</th><td>Powered shell · liquid loop · facility ops
+                <small>CDUs, manifolds, secondary circuits, 24×7 facility operations and maintenance</small></td></tr>
+              <tr><th scope="row">Density</th><td>250 kW-class racks, direct liquid cooled
+                <small>2.5 MW per acre · 1.10 design PUE</small></td></tr>
+              <tr><th scope="row">Increments</th><td>5 MW phases → 25 MW campuses
+                <small>lease a phase, a building, or a campus; expansion rights by commitment</small></td></tr>
+              <tr><th scope="row">Delivery</th><td>Windows committed at contract
+                <small>SkyVault prefabricated modules; progress reported against the committed window</small></td></tr>
+              <tr><th scope="row">Term</th><td>Multi-year committed agreements
+                <small>structured to tenant scale and credit; priced per engagement beyond the base rate</small></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="check-rows">
+            <div class="check-row">
+              <span class="tick" aria-hidden="true">✓</span>
+              <div>
+                <h4>Your hardware, our building</h4>
+                <p>We are a pure-play landlord — no house cloud competing for capacity, no
+                  shared control planes. Physical and logical separation at the lease boundary.</p>
+              </div>
+            </div>
+            <div class="check-row">
+              <span class="tick" aria-hidden="true">✓</span>
+              <div>
+                <h4>Owned ground, stable landlord</h4>
+                <p>Our campuses sit on land we own outright — Iowa's 10 acres today, and every
+                  future site on the same fee-simple template. No ground-lease escalators or
+                  reversion risk passed through to your rent.</p>
+              </div>
+            </div>
+            <div class="check-row">
+              <span class="tick" aria-hidden="true">✓</span>
+              <div>
+                <h4>Liquid-native, not retrofitted</h4>
+                <p>The cooling plant is the base building — SkyVault direct-to-chip and
+                  rear-door heat exchange for 250 kW-class racks at a 1.10 design-point PUE —
+                  not an air-cooled hall with rear doors bolted on.</p>
+              </div>
+            </div>
+            <div class="check-row">
+              <span class="tick" aria-hidden="true">✓</span>
+              <div>
+                <h4>Iowa first, a roadmap behind it</h4>
+                <p>Wind-heavy Iowa is signed and first to energize. ERCOT Texas, hydro Quebec,
+                  and sovereign India follow on the planned buildout — early commitments
+                  choose their site and hold their window.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="contact">
+    <div class="wrap">
+      <h2>Reserve your kilowatts.</h2>
+      <p>Tell us your rack profile, target site, and timeline — we'll come back with available
+        phases, the lease framework, and a committed delivery window.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary btn-lg" href="mailto:leasing@dc.ai119.com">leasing@dc.ai119.com</a>
+      </div>
+      <p style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:1.5px;">
+        LEASING &amp; SITE TOURS · AI119 DC</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="AI119 DC home">
+          <span class="tile-mini" aria-hidden="true">Ai</span>
+          <span class="wordmark">ai<span>119</span></span>
+          <span class="dc-badge">DC</span>
+        </a>
+        <p>High-density liquid-cooled data centers, built to be leased. Powered shell, liquid
+          loop, and 24×7 facility operations at one transparent rate.</p>
+      </div>
+      <div class="footer-col">
+        <h4>AI119 DC</h4>
+        <ul>
+          <li><a href="#portfolio">Sites</a></li>
+          <li><a href="#engineering">Engineering standard</a></li>
+          <li><a href="#leasing">Leasing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sites</h4>
+        <ul>
+          <li><a href="#portfolio">Iowa · United States</a></li>
+          <li><a href="#portfolio">Texas · United States</a></li>
+          <li><a href="#portfolio">Quebec · Canada</a></li>
+          <li><a href="#portfolio">India</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Leasing</h4>
+        <ul>
+          <li><a href="mailto:leasing@dc.ai119.com">Reserve capacity</a></li>
+          <li><a href="mailto:leasing@dc.ai119.com">Book a site tour</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span data-year>2026</span> AI119 DC. All rights reserved.</span>
+      <span class="tagline">Land · Power · Cooling</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+<script>
+(function () {
+  var tabs = document.querySelectorAll(".site-tab");
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      tabs.forEach(function (t) { t.setAttribute("aria-selected", "false"); });
+      tab.setAttribute("aria-selected", "true");
+      document.querySelectorAll(".site-panel").forEach(function (p) { p.classList.remove("active"); });
+      var panel = document.getElementById("panel-" + tab.dataset.site);
+      if (panel) panel.classList.add("active");
+    });
+  });
+})();
+</script>
+</body>
+</html>
