@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI119 DC — Liquid-Cooled Data Centers</title>
-  <meta name="description" content="AI119 DC builds, owns, and operates high-density liquid-cooled data centers. Iowa campus signed and in development; a 100 MW buildout planned across four sites. Lease liquid-ready capacity at a transparent $150K/MW/month.">
-  <meta property="og:title" content="AI119 DC — Liquid-Cooled Data Centers">
+  <title>dc119 — Liquid-Cooled AI Data Center Infrastructure</title>
+  <meta name="description" content="dc119 builds, owns, and operates high-density liquid-cooled data centers. Iowa campus signed and in development; a 100 MW buildout planned across four sites. Lease liquid-ready capacity at a transparent $150K/MW/month.">
+  <meta property="og:title" content="dc119 — Liquid-Cooled AI Data Center Infrastructure">
   <meta property="og:description" content="Iowa signed, 100 MW planned across four sites. 250 kW rack-ready liquid cooling at $150K/MW/month — reserve capacity now.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dc.ai119.com/">
+  <meta property="og:url" content="https://dc119.com/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,26 +16,45 @@
   <script>(function(){try{if(localStorage.getItem("ai119-theme")==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .dc-badge{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:2px;
-      color:var(--accent-text);border:1px solid var(--line-strong);border-radius:6px;padding:3px 7px;margin-left:8px;}
     .site-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 22px;}
-    .site-tab{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:1.5px;padding:10px 16px;
+    .site-tab{font-family:Arial,Helvetica,sans-serif;font-size:12px;letter-spacing:1.5px;padding:10px 16px;
       border:1px solid var(--line-strong);border-radius:10px;background:transparent;color:var(--ink-2);cursor:pointer;}
     .site-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#06231e;font-weight:600;}
     .site-panel{display:none;}
     .site-panel.active{display:block;}
     .split-40{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:start;}
     @media (max-width: 860px){.split-40{grid-template-columns:1fr;}}
+    /* ---- dc119 brand overrides ---- */
+    :root{
+      --font-display: Cambria, Georgia, 'Times New Roman', serif;
+      --font-body: Arial, Helvetica, sans-serif;
+      --font-mono: Arial, Helvetica, sans-serif;
+      --accent:#C55A11; --accent-strong:#A64A0E; --accent-text:#9C4A0B;
+      --accent-glow: rgba(197,90,17,0.14);
+      --ink:#1F3864;
+    }
+    [data-theme="dark"]{
+      --ink:#EEF4F6; --accent:#E8833A; --accent-strong:#F0985A; --accent-text:#F0985A;
+      --accent-glow: rgba(232,131,58,0.16);
+    }
+    body{font-family:var(--font-body);}
+    .brand .wordmark span{color:#8A9099;}
+    .brand .tile-mini{background:#1F3864;border-color:#1F3864;color:#FFFFFF;font-family:var(--font-display);}
+    .brand .tile-mini::before{color:#C9D4E4;}
+    .element-tile{background:#1F3864;border-color:#31517F;}
+    .element-tile .sym,.element-tile .sym b{color:#FFFFFF;}
+    .element-tile .z,.element-tile .name{color:#C9D4E4;}
+    .element-tile .mass{color:#9FB0C8;}
+    [data-theme="dark"] .brand .tile-mini,[data-theme="dark"] .element-tile{background:#1F3864;border-color:#3A5C8C;}
   </style>
 </head>
 <body>
 
 <header class="site-header">
   <nav class="nav" aria-label="Primary">
-    <a class="brand" href="./" aria-label="AI119 DC home">
-      <span class="tile-mini" aria-hidden="true">Ai</span>
-      <span class="wordmark">ai<span>119</span></span>
-      <span class="dc-badge">DC</span>
+    <a class="brand" href="./" aria-label="dc119 home">
+      <span class="tile-mini" aria-hidden="true">Dc</span>
+      <span class="wordmark">dc<span>119</span></span>
     </a>
     <ul class="nav-links">
       <li><a href="#portfolio">Sites</a></li>
@@ -58,9 +77,9 @@
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div>
-        <p class="eyebrow">AI119 DC · Liquid-cooled data centers</p>
+        <p class="eyebrow">dc119 · Liquid-cooled AI data center infrastructure</p>
         <h1>The ground the <span class="accent">AI&nbsp;cloud</span> stands on.</h1>
-        <p class="lede">AI119 DC builds, owns, and operates high-density liquid-cooled data
+        <p class="lede">dc119 builds, owns, and operates high-density liquid-cooled data
           centers — powered shell with the liquid loop already in the building, delivered as
           prefabricated, factory-integrated modules. If you run AI-scale hardware, lease your
           megawatts at one transparent rate: $150K per MW per month.</p>
@@ -75,8 +94,8 @@
         <div class="orbit o2"><span class="dot d2"></span></div>
         <div class="element-tile">
           <span class="z">119</span>
-          <span class="sym">A<b>i</b></span>
-          <span class="name">Aezium</span>
+          <span class="sym">Dc</span>
+          <span class="name">data centers</span>
           <span class="mass">LAND · POWER · COOLING</span>
         </div>
       </div>
@@ -113,7 +132,7 @@
   <section class="section" id="thesis">
     <div class="wrap">
       <div class="section-head reveal">
-        <p class="eyebrow">Why AI119 DC</p>
+        <p class="eyebrow">Why dc119</p>
         <h2>A landlord built for liquid-cooled tenants.</h2>
         <p>Most data centers were designed for air and retrofitted for density. Ours were
           designed around the liquid loop from the first drawing — so AI-scale hardware lands
@@ -386,10 +405,10 @@
       <p>Tell us your rack profile, target site, and timeline — we'll come back with available
         phases, the lease framework, and a committed delivery window.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg" href="mailto:leasing@dc.ai119.com">leasing@dc.ai119.com</a>
+        <a class="btn btn-primary btn-lg" href="mailto:leasing@dc119.com">leasing@dc119.com</a>
       </div>
       <p style="margin-top:14px; font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:1.5px;">
-        LEASING &amp; SITE TOURS · AI119 DC</p>
+        LEASING &amp; SITE TOURS · dc119</p>
     </div>
   </section>
 
@@ -399,16 +418,15 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="./" aria-label="AI119 DC home">
-          <span class="tile-mini" aria-hidden="true">Ai</span>
-          <span class="wordmark">ai<span>119</span></span>
-          <span class="dc-badge">DC</span>
+        <a class="brand" href="./" aria-label="dc119 home">
+          <span class="tile-mini" aria-hidden="true">Dc</span>
+          <span class="wordmark">dc<span>119</span></span>
         </a>
         <p>High-density liquid-cooled data centers, built to be leased. Powered shell, liquid
           loop, and 24×7 facility operations at one transparent rate.</p>
       </div>
       <div class="footer-col">
-        <h4>AI119 DC</h4>
+        <h4>dc119</h4>
         <ul>
           <li><a href="#portfolio">Sites</a></li>
           <li><a href="#engineering">Engineering standard</a></li>
@@ -427,13 +445,13 @@
       <div class="footer-col">
         <h4>Leasing</h4>
         <ul>
-          <li><a href="mailto:leasing@dc.ai119.com">Reserve capacity</a></li>
-          <li><a href="mailto:leasing@dc.ai119.com">Book a site tour</a></li>
+          <li><a href="mailto:leasing@dc119.com">Reserve capacity</a></li>
+          <li><a href="mailto:leasing@dc119.com">Book a site tour</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-base">
-      <span>© <span data-year>2026</span> AI119 DC. All rights reserved.</span>
+      <span>© <span data-year>2026</span> dc119. All rights reserved.</span>
       <span class="tagline">Land · Power · Cooling</span>
     </div>
   </div>
